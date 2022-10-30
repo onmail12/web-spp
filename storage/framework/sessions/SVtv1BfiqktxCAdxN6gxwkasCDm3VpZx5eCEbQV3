@@ -1,1 +1,1 @@
-a:3:{s:6:"_token";s:40:"M4LN5JMnhWw6h2i4OhKH960pxjQgOTHReRSYGvmn";s:9:"_previous";a:1:{s:3:"url";s:119:"http://localhost:8000/create_siswa?_token=M4LN5JMnhWw6h2i4OhKH960pxjQgOTHReRSYGvmn&nama=8080&nis=8080&nisn=8080&tahun=1";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}}
+a:3:{s:6:"_token";s:40:"M4LN5JMnhWw6h2i4OhKH960pxjQgOTHReRSYGvmn";s:9:"_previous";a:1:{s:3:"url";s:27:"http://localhost:8000/siswa";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}}
