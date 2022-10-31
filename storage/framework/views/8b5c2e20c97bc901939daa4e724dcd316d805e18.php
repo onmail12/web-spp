@@ -16,6 +16,7 @@
         <th>Nominal</th>
         <th>Nama</th>
         <th colspan=2>Aksi</th>
+        th
     </thead>
     <?php $i = 0; ?>
     <?php $__currentLoopData = $spp; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

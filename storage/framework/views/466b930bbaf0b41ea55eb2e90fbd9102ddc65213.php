@@ -16,6 +16,7 @@
     <link href="<?php echo e(asset('css/bootstrap.css')); ?>" rel="stylesheet" />
     <script src="<?php echo e(asset('js/bootstrap.js')); ?>"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -23,7 +24,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand fw-bolder" href="index.html"><img src="smkn6.png" width="40px" alt=""> Website Pembayaran SPP</a>
+                <a class="navbar-brand fw-bolder" href="index.html"><img src="smkn6.png" width="40px" alt=""> Website
+                    Pembayaran SPP</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
@@ -34,7 +36,7 @@
                         <li class="nav-item"><a class="nav-link px-2" href="/petugas">Petugas</a></li>
                         <li class="nav-item"><a class="nav-link px-2" href="/siswa">Siswa</a></li>
                         <li class="nav-item"><a class="nav-link px-2" href="/kelas">Kelas</a></li>
-                        
+
 
                         <li class="nav-item dropdown">
                             <a class="nav-link px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
@@ -55,7 +57,6 @@
         <header class="bg-dark py-5">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
-                    
                     <div class="col-lg-8 col-xl-auto col-xxl-auto">
                         <div class="my-5 text-center text-xl-start">
                             
@@ -67,9 +68,9 @@
             </div>
         </header>
         <?php else: ?>
-            
+
         <?php endif; ?>
-        
+
         <!-- Features section-->
         <section class="py-5 my-5">
 
