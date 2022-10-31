@@ -8,11 +8,15 @@
     <i class="bi bi-person-plus px-2"></i>Tambah Spp</a>
 
 <table class="table table-hover text-nowrap table-bordered geeks">
+    
     <thead class="table-dark">
+        
         <th>No</th>
         <th>Tahun</th>
         <th>Nominal</th>
+        <th>Nama</th>
         <th colspan=2>Aksi</th>
+        th
     </thead>
     @php $i = 0; @endphp
     @foreach ($spp as $spp)
@@ -21,6 +25,7 @@
         <td>{{ $i }}</td>
         <td>{{ $spp->tahun }}</td>
         <td>{{ $spp->nominal }}</td>
+        <td>{{ $spp->siswa }}</td>
         <td><a class="btn btn-outline-primary" href="{{route('edit_spp', $spp->id_spp)}}"><i
                     class="bi bi-pencil-square"></i></a>
         <td><a class="btn btn-outline-danger" href="{{route('delete_spp', $spp->id_spp)}}"><i

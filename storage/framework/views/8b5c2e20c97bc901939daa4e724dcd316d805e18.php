@@ -8,10 +8,13 @@
     <i class="bi bi-person-plus px-2"></i>Tambah Spp</a>
 
 <table class="table table-hover text-nowrap table-bordered geeks">
+    
     <thead class="table-dark">
+        
         <th>No</th>
         <th>Tahun</th>
         <th>Nominal</th>
+        <th>Nama</th>
         <th colspan=2>Aksi</th>
     </thead>
     <?php $i = 0; ?>
@@ -21,6 +24,7 @@
         <td><?php echo e($i); ?></td>
         <td><?php echo e($spp->tahun); ?></td>
         <td><?php echo e($spp->nominal); ?></td>
+        <td><?php echo e($spp->siswa); ?></td>
         <td><a class="btn btn-outline-primary" href="<?php echo e(route('edit_spp', $spp->id_spp)); ?>"><i
                     class="bi bi-pencil-square"></i></a>
         <td><a class="btn btn-outline-danger" href="<?php echo e(route('delete_spp', $spp->id_spp)); ?>"><i
