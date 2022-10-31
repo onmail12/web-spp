@@ -14,9 +14,8 @@
         <th>No</th>
         <th>Tahun</th>
         <th>Nominal</th>
-        <th>Nama</th>
+        
         <th colspan=2>Aksi</th>
-        th
     </thead>
     <?php $i = 0; ?>
     <?php $__currentLoopData = $spp; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -25,7 +24,7 @@
         <td><?php echo e($i); ?></td>
         <td><?php echo e($spp->tahun); ?></td>
         <td><?php echo e($spp->nominal); ?></td>
-        <td><?php echo e($spp->siswa); ?></td>
+        
         <td><a class="btn btn-outline-primary" href="<?php echo e(route('edit_spp', $spp->id_spp)); ?>"><i
                     class="bi bi-pencil-square"></i></a>
         <td><a class="btn btn-outline-danger" href="<?php echo e(route('delete_spp', $spp->id_spp)); ?>"><i

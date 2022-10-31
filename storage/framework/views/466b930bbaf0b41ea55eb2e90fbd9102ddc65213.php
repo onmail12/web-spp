@@ -15,7 +15,9 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?php echo e(asset('css/bootstrap.css')); ?>" rel="stylesheet" />
     <script src="<?php echo e(asset('js/bootstrap.js')); ?>"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 
 </head>
 
@@ -36,7 +38,7 @@
                         <li class="nav-item"><a class="nav-link px-2" href="/petugas">Petugas</a></li>
                         <li class="nav-item"><a class="nav-link px-2" href="/siswa">Siswa</a></li>
                         <li class="nav-item"><a class="nav-link px-2" href="/kelas">Kelas</a></li>
-
+                        <li class="nav-item"><a class="nav-link px-2" href="/spp">Admin</a></li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
@@ -46,7 +48,7 @@
                                 <li><a class="dropdown-item" href="blog-post.html">Histori Pembayaran</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link px-2" href="/spp">Admin</a></li>
+
 
                     </ul>
                 </div>
