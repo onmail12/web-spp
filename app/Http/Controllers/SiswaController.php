@@ -33,6 +33,9 @@ class SiswaController extends Controller
             'nisn' => $request->nisn,
             'nis' => $request->nis,
             'nama' => $request->nama,
+            'id_kelas' => 1,
+            'alamat' => 'alamat',
+            'no_tlp' => '0888',
             'id_spp' => $request->tahun,
         ]);
         return redirect('/siswa');

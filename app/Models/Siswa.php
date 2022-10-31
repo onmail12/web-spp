@@ -9,11 +9,16 @@ class Siswa extends Model
 {
     use HasFactory;
     protected $table = 'siswa';
-    protected $fillable = ['nama', 'nisn','nis', 'id_spp'];
+    protected $guarded = ['id'];
+    protected $primaryKey = 'nisn';
     public $timestamps = false;
 
     public function spp()
     {
         return $this->belongsTo(Spp::class, "id_spp", "id_spp");
+    }
+
+    public function kelas(){
+        return $this->belongsTo(Kelas::class, "id_kelas", "id_kelas");
     }
 }
