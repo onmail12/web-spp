@@ -74,7 +74,7 @@
         <?php endif; ?>
 
         <!-- Features section-->
-        <section class="py-5 my-5">
+        <section class="section">
 
 
             <div class="container px-5 my-5">

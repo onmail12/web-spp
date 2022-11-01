@@ -24,25 +24,28 @@
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="kelas">Kelas</label>
-            <select name="kelas">
-                <option value="<?php echo e($siswa->kelas->nama_kelas); ?>"><?php echo e($siswa->kelas->nama_kelas); ?></option>
+            <label for="id_kelas">Kelas</label>
+            <select class="form-select" name="id_kelas">
+                <?php $__currentLoopData = $kelas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kelas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option value="<?php echo e($kelas->id_kelas); ?>"><?php echo e($kelas->nama_kelas); ?></option>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
             </select>
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="nama">Kelas</label>
-            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+            <label for="alamat">Alamat</label>
+            <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+            <label for="no_telp">No. Telpon</label>
+            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="tahun">Spp Tahun</label>
-            <select class="form-select" name="tahun" id="tahun">
+            <label for="id_spp">Spp Tahun</label>
+            <select class="form-select" name="id_spp">
                 <?php $__currentLoopData = $spp; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <option value="<?php echo e($spp->id_spp); ?>"><?php echo e($spp->tahun); ?></option>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

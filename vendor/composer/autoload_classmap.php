@@ -21,6 +21,8 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\ValidateSignature' => $baseDir . '/app/Http/Middleware/ValidateSignature.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Models\\Kelas' => $baseDir . '/app/Models/Kelas.php',
+    'App\\Models\\Pembayaran' => $baseDir . '/app/Models/Pembayaran.php',
     'App\\Models\\Petugas' => $baseDir . '/app/Models/Petugas.php',
     'App\\Models\\Siswa' => $baseDir . '/app/Models/Siswa.php',
     'App\\Models\\Spp' => $baseDir . '/app/Models/Spp.php',
