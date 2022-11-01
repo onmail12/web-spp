@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Siswa;
 use App\Models\Spp;
+use App\Models\Kelas;
 
 class SiswaController extends Controller
 {
@@ -24,20 +25,23 @@ class SiswaController extends Controller
 
     public function indexTambah(Siswa $siswa){
         $siswa = Siswa::all();
-        return view("siswa/tambah_siswa", compact('siswa'));
-        dd($siswa->kelas);
+        $spp = Spp::all();
+        $kelas = Kelas::all();
+        return view("siswa/tambah_siswa", compact('siswa', 'spp', 'kelas'));
+        
     }
 
     public function create(Request $request)
     {
+        
         $siswa = Siswa::create([
             'nisn' => $request->nisn,
             'nis' => $request->nis,
             'nama' => $request->nama,
-            'id_kelas' => 1,
-            'alamat' => 'alamat',
-            'no_tlp' => '0888',
-            'id_spp' => $request->tahun,
+            'id_kelas' => $request->id_kelas,
+            'alamat' => $request->alamat,
+            'no_telp' => $request->no_telp,
+            'id_spp' => $request->id_spp,
         ]);
         return redirect('/siswa');
     }
