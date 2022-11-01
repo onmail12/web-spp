@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('spp', function (Blueprint $table) {
-            $table->increments("id_spp")->unsigned();
-            $table->integer("tahun");
-            $table->integer("nominal");
+        Schema::create('kelas', function (Blueprint $table) {
+            $table->id('id_kelas');
+            $table->string('nama_kelas');
+            $table->string('kompetensi_keahlian');
+            
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spp');
+        Schema::dropIfExists('kelas');
     }
 };

@@ -14,12 +14,18 @@ return new class extends Migration
     public function up()
     {
         Schema::create('siswa', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('nisn');
+            
+            $table->string('nisn')->primary();
             $table->string('nis');
-            $table->integer('id_spp')->unsigned();
-            $table->foreign('id_spp')->references('id_spp')->on('spp');
+            $table->string('nama');
+            $table->foreignId('id_kelas')->index();
+            $table->text('alamat');
+            $table->string('no_telp', 13);
+            $table->foreignId('id_spp')->index();
+
+            //foreigns
+            $table->foreign('id_spp')->references('id_spp')->on('spp')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_kelas')->references('id_kelas')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
