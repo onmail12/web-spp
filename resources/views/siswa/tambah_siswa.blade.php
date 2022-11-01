@@ -21,6 +21,24 @@
             <label for="nama">Nama</label>
             <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
         </div>
+
+        <div class="form-group mb-3 my-2">
+            <label for="kelas">Kelas</label>
+            <select name="kelas">
+                <option value="{{$siswa->kelas->nama_kelas}}">{{$siswa->kelas->nama_kelas}}</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3 my-2">
+            <label for="nama">Kelas</label>
+            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+        </div>
+
+        <div class="form-group mb-3 my-2">
+            <label for="nama">Nama</label>
+            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+        </div>
+
         <div class="form-group mb-3 my-2">
             <label for="tahun">Spp Tahun</label>
             <select class="form-select" name="tahun" id="tahun">
@@ -29,6 +47,7 @@
                 @endforeach
             </select>
         </div>
+
         <div class="form-group mb-3 my-2">
             <button type="submit" class="btn btn-primary px-4 me-sm-2 my-2">Submit</button>
         </div>

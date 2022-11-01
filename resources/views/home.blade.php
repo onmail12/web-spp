@@ -9,4 +9,5 @@
     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Transaksi Pembayaran</a>
     <a class="btn btn-outline-light btn-lg px-4" href="#!">Histori Pembayaran</a>
 </div>
+drop
 @endsection

@@ -9,5 +9,6 @@
     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Transaksi Pembayaran</a>
     <a class="btn btn-outline-light btn-lg px-4" href="#!">Histori Pembayaran</a>
 </div>
+drop
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\School\Kelas XI\Pemrograman Web\bayar_spp\resources\views/home.blade.php ENDPATH**/ ?>

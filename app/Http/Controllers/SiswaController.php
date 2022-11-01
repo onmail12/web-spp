@@ -22,9 +22,10 @@ class SiswaController extends Controller
         return view("siswa/siswa", compact('siswa'));
     }
 
-    public function indexTambah(Spp $spp){
-        $spp = $spp::all();
-        return view("siswa/tambah_siswa", compact('spp'));
+    public function indexTambah(Siswa $siswa){
+        $siswa = Siswa::all();
+        return view("siswa/tambah_siswa", compact('siswa'));
+        dd($siswa->kelas);
     }
 
     public function create(Request $request)

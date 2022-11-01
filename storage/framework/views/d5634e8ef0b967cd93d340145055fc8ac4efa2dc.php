@@ -26,7 +26,7 @@
         <td><?php echo e($siswa->nama); ?></td>
 
         <td><?php echo e($siswa->spp->tahun); ?></td>
-        <td><?php echo e($siswa->kelas->nama_kelas); ?></td>
+        <td><?php echo e($siswa->spp->nominal); ?></td>
 
         <td><a class="btn btn-outline-primary" href="<?php echo e(route('edit_siswa', $siswa->nisn)); ?>"><i
                     class="bi bi-pencil-square"></i></a>
