@@ -23,25 +23,28 @@
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="kelas">Kelas</label>
-            <select name="kelas">
-                <option value="{{$siswa->kelas->nama_kelas}}">{{$siswa->kelas->nama_kelas}}</option>
+            <label for="id_kelas">Kelas</label>
+            <select class="form-select" name="id_kelas">
+                @foreach ($kelas as $kelas)
+                <option value="{{$kelas->id_kelas}}">{{$kelas->nama_kelas}}</option>
+                @endforeach
+
             </select>
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="nama">Kelas</label>
-            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+            <label for="alamat">Alamat</label>
+            <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+            <label for="no_telp">No. Telpon</label>
+            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
         </div>
 
         <div class="form-group mb-3 my-2">
-            <label for="tahun">Spp Tahun</label>
-            <select class="form-select" name="tahun" id="tahun">
+            <label for="id_spp">Spp Tahun</label>
+            <select class="form-select" name="id_spp">
                 @foreach ($spp as $spp)
                 <option value="{{$spp->id_spp}}">{{$spp->tahun}}</option>
                 @endforeach
