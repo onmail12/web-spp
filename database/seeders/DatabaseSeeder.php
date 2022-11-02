@@ -24,34 +24,20 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Kelas::create([
-            'nama_kelas' => 'XII RPL 1',
-            'kompetensi_keahlian' => 'Software & Computer',
-        ]);
+        Kelas::factory(10)->create();
 
-        Kelas::create([
-            'nama_kelas' => 'XII TKJ 1',
-            'kompetensi_keahlian' => 'Hardware & Computer',
-        ]);
+        Spp::factory(10)->create();
 
-        Spp::create([
-            'tahun' => 2021,
-            'nominal' => 800
-        ]);
+        Siswa::factory(10)->create();
 
-        Spp::create([
-            'tahun' => 2022,
-            'nominal' => 750
-        ]);
-
-        Siswa::create([
-            'nisn' => random_int(2000, 9000),
-            'nis' => random_int(2000, 9000),
-            'nama' => $faker->name,
-            'id_kelas' => random_int(1, 2),
-            'id_spp' => random_int(1, 2),
-            'alamat' => $faker->address,
-            'no_telp' => '0813812399',
-        ]);
+        // Siswa::create([
+        //     'nisn' => random_int(2000, 9000),
+        //     'nis' => random_int(2000, 9000),
+        //     'nama' => $faker->name,
+        //     'id_kelas' => random_int(1, 2),
+        //     'id_spp' => random_int(1, 2),
+        //     'alamat' => $faker->address,
+        //     'no_telp' => '0813812399',
+        // ]);
     }
 }

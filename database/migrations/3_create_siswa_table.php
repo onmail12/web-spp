@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nama');
             $table->foreignId('id_kelas')->index();
             $table->text('alamat');
-            $table->string('no_telp', 13);
+            $table->string('no_telp');
             $table->foreignId('id_spp')->index();
 
             //foreigns

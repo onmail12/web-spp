@@ -11,6 +11,7 @@ class Siswa extends Model
     protected $table = 'siswa';
     protected $fillable = ['nisn', 'nis', 'nama', 'id_kelas', 'alamat', 'no_telp', 'id_spp'];
     protected $primaryKey = 'nisn';
+    protected $with = ['spp', 'kelas'];
     public $timestamps = false;
 
     public function spp()

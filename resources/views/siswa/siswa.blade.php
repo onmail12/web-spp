@@ -10,6 +10,7 @@
         <th>No</th>
         <th>NIS</th>
         <th>Nama</th>
+        <th>Alamat</th>
         <th>Kelas</th>
         <th style="width:100px;" colspan=2>Aksi</th>
     </thead>
@@ -21,6 +22,7 @@
         <td>{{ $i }}</td>
         <td>{{ $siswa->nis }}</td>
         <td>{{ $siswa->nama }}</td>
+        <td>{{ $siswa->alamat }}</td>
         <td>{{ $siswa->kelas->nama_kelas }}</td>
 
         <td><a class="btn btn-outline-primary" href="{{ route('edit_siswa', $siswa->nisn) }}"><i

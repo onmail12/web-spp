@@ -10,6 +10,7 @@
         <th>No</th>
         <th>NIS</th>
         <th>Nama</th>
+        <th>Alamat</th>
         <th>Kelas</th>
         <th style="width:100px;" colspan=2>Aksi</th>
     </thead>
@@ -21,6 +22,7 @@
         <td><?php echo e($i); ?></td>
         <td><?php echo e($siswa->nis); ?></td>
         <td><?php echo e($siswa->nama); ?></td>
+        <td><?php echo e($siswa->alamat); ?></td>
         <td><?php echo e($siswa->kelas->nama_kelas); ?></td>
 
         <td><a class="btn btn-outline-primary" href="<?php echo e(route('edit_siswa', $siswa->nisn)); ?>"><i

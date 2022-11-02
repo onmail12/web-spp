@@ -7,42 +7,48 @@
 <h2>Masukkan Data Siswa</h2>
 
 <div class="border rounded-4">
-    <form class="px-3 mx-3 mt-3 mb-3" action="{{route('create_siswa')}}" method="GET">
+    <form class="p-3 m-3" action="{{route('create_siswa')}}" method="GET">
         {{ csrf_field() }}
-        <div class="form-group mb-3 my-2">
-            <label for="nisn">NISN</label>
-            <input type="text" class="form-control" name="nisn" placeholder="Enter NISN">
-        </div>
-        <div class="form-group mb-3 my-2">
-            <label for="nis">NIS</label>
-            <input type="text" class="form-control" name="nis" placeholder="Enter NIS">
-        </div>
-        <div class="form-group mb-3 my-2">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+        <div class="row">
+            <div class="col form-group my-2">
+                <label for="nisn">NISN</label>
+                <input type="text" class="form-control" name="nisn" placeholder="Enter NISN">
+            </div>
+            <div class="col form-group my-2">
+                <label for="nis">NIS</label>
+                <input type="text" class="form-control" name="nis" placeholder="Enter NIS">
+            </div>
         </div>
 
-        <div class="form-group mb-3 my-2">
-            <label for="id_kelas">Kelas</label>
-            <select class="form-select" name="id_kelas">
-                @foreach ($kelas as $kelas)
-                <option value="{{$kelas->id_kelas}}">{{$kelas->nama_kelas}}</option>
-                @endforeach
+        <div class="row">
+            <div class="col form-group my-2">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+            </div>
 
-            </select>
+            <div class="col form-group my-2">
+                <label for="id_kelas">Kelas</label>
+                <select class="form-select" name="id_kelas">
+                    @foreach ($kelas as $kelas)
+                    <option value="{{$kelas->id_kelas}}">{{$kelas->nama_kelas}}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
 
-        <div class="form-group mb-3 my-2">
-            <label for="alamat">Alamat</label>
-            <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
+        <div class="row">
+            <div class="col form-group my-2">
+                <label for="alamat">Alamat</label>
+                <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
+            </div>
+
+            <div class="col form-group my-2">
+                <label for="no_telp">No.Telp</label>
+                <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
+            </div>
         </div>
 
-        <div class="form-group mb-3 my-2">
-            <label for="no_telp">No. Telpon</label>
-            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
-        </div>
-
-        <div class="form-group mb-3 my-2">
+        <div class="form-group my-2">
             <label for="id_spp">Spp Tahun</label>
             <select class="form-select" name="id_spp">
                 @foreach ($spp as $spp)
@@ -50,10 +56,11 @@
                 @endforeach
             </select>
         </div>
+</div>
 
-        <div class="form-group mb-3 my-2">
-            <button type="submit" class="btn btn-primary px-4 me-sm-2 my-2">Submit</button>
-        </div>
-    </form>
+<div class="form-group my-2">
+    <button type="submit" class="btn btn-primary px-4 me-sm-2 my-2">Submit</button>
+</div>
+</form>
 </div>
 @endsection

@@ -7,43 +7,49 @@
 <h2>Masukkan Data Siswa</h2>
 
 <div class="border rounded-4">
-    <form class="px-3 mx-3 mt-3 mb-3" action="<?php echo e(route('create_siswa')); ?>" method="GET">
+    <form class="p-3 m-3" action="<?php echo e(route('create_siswa')); ?>" method="GET">
         <?php echo e(csrf_field()); ?>
 
-        <div class="form-group mb-3 my-2">
-            <label for="nisn">NISN</label>
-            <input type="text" class="form-control" name="nisn" placeholder="Enter NISN">
-        </div>
-        <div class="form-group mb-3 my-2">
-            <label for="nis">NIS</label>
-            <input type="text" class="form-control" name="nis" placeholder="Enter NIS">
-        </div>
-        <div class="form-group mb-3 my-2">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+        <div class="row">
+            <div class="col form-group my-2">
+                <label for="nisn">NISN</label>
+                <input type="text" class="form-control" name="nisn" placeholder="Enter NISN">
+            </div>
+            <div class="col form-group my-2">
+                <label for="nis">NIS</label>
+                <input type="text" class="form-control" name="nis" placeholder="Enter NIS">
+            </div>
         </div>
 
-        <div class="form-group mb-3 my-2">
-            <label for="id_kelas">Kelas</label>
-            <select class="form-select" name="id_kelas">
-                <?php $__currentLoopData = $kelas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kelas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <option value="<?php echo e($kelas->id_kelas); ?>"><?php echo e($kelas->nama_kelas); ?></option>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <div class="row">
+            <div class="col form-group my-2">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+            </div>
 
-            </select>
+            <div class="col form-group my-2">
+                <label for="id_kelas">Kelas</label>
+                <select class="form-select" name="id_kelas">
+                    <?php $__currentLoopData = $kelas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kelas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <option value="<?php echo e($kelas->id_kelas); ?>"><?php echo e($kelas->nama_kelas); ?></option>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </select>
+            </div>
         </div>
 
-        <div class="form-group mb-3 my-2">
-            <label for="alamat">Alamat</label>
-            <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
+        <div class="row">
+            <div class="col form-group my-2">
+                <label for="alamat">Alamat</label>
+                <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
+            </div>
+
+            <div class="col form-group my-2">
+                <label for="no_telp">No.Telp</label>
+                <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
+            </div>
         </div>
 
-        <div class="form-group mb-3 my-2">
-            <label for="no_telp">No. Telpon</label>
-            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
-        </div>
-
-        <div class="form-group mb-3 my-2">
+        <div class="form-group my-2">
             <label for="id_spp">Spp Tahun</label>
             <select class="form-select" name="id_spp">
                 <?php $__currentLoopData = $spp; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -51,11 +57,12 @@
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </select>
         </div>
+</div>
 
-        <div class="form-group mb-3 my-2">
-            <button type="submit" class="btn btn-primary px-4 me-sm-2 my-2">Submit</button>
-        </div>
-    </form>
+<div class="form-group my-2">
+    <button type="submit" class="btn btn-primary px-4 me-sm-2 my-2">Submit</button>
+</div>
+</form>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\School\Kelas XI\Pemrograman Web\bayar_spp\resources\views/siswa/tambah_siswa.blade.php ENDPATH**/ ?>

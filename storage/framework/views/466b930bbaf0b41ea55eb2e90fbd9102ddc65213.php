@@ -26,7 +26,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand fw-bolder" href="index.html"><img src="smkn6.png" width="40px" alt=""> Website
+                <a class="navbar-brand fw-bolder" href="index.html"><img src="smkn6.webp" width="40px" alt=""> Website
                     Pembayaran SPP</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
