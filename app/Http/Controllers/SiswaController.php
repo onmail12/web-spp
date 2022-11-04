@@ -9,15 +9,16 @@ use App\Models\Kelas;
 
 class SiswaController extends Controller
 {
-
     public function index(Siswa $siswa, Spp $spp)
     {
         // $siswa = [
         //     ['nisn' => 'nisncontoh', 'nis' => 12345, 'nama' => 'iqbal', 'id_spp' => 'id_sppContoh'],
         //     ['nisn' => 'nisncontoh2', 'nis' => 1234, 'nama' => 'tes', 'id_spp' => 'id_sppContoh2'],
         // ];
-        $siswa = Siswa::all();
-        return view("siswa/siswa", compact('siswa'));
+        $siswa = Siswa::latest()->get();
+        $kelas = Kelas::all();
+        $spp = Spp::all();
+        return view("siswa/siswa", compact('siswa', 'kelas', 'spp'));
     }
 
     public function indexTambah(Siswa $siswa)

@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/siswa', [SiswaController::class, 'index']);
+
 Route::get('/tambah_siswa', [SiswaController::class, 'indexTambah']) -> name('tambah_siswa');
 Route::get('/create_siswa', [SiswaController::class, 'create']) -> name('create_siswa');
 

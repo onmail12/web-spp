@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('no_telp');
             $table->foreignId('id_spp')->index();
 
+            $table->time('created_at');
+            $table->time('updated_at');
+            
             //foreigns
             $table->foreign('id_spp')->references('id_spp')->on('spp')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('id_kelas')->references('id_kelas')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
