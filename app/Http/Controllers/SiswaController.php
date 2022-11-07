@@ -11,23 +11,19 @@ class SiswaController extends Controller
 {
     public function index(Siswa $siswa, Spp $spp)
     {
-        // $siswa = [
-        //     ['nisn' => 'nisncontoh', 'nis' => 12345, 'nama' => 'iqbal', 'id_spp' => 'id_sppContoh'],
-        //     ['nisn' => 'nisncontoh2', 'nis' => 1234, 'nama' => 'tes', 'id_spp' => 'id_sppContoh2'],
-        // ];
         $siswa = Siswa::latest()->get();
         $kelas = Kelas::all();
         $spp = Spp::all();
         return view("siswa/siswa", compact('siswa', 'kelas', 'spp'));
     }
 
-    public function indexTambah(Siswa $siswa)
-    {
-        $siswa = Siswa::all();
-        $spp = Spp::all();
-        $kelas = Kelas::all();
-        return view("siswa/tambah_siswa", compact('siswa', 'spp', 'kelas'));
-    }
+    // public function index_tambah(Siswa $siswa)
+    // {
+    //     $siswa = Siswa::all();
+    //     $spp = Spp::all();
+    //     $kelas = Kelas::all();
+    //     return view("siswa/tambah_siswa", compact('siswa', 'spp', 'kelas'));
+    // }
 
     public function create(Request $request)
     {
@@ -75,4 +71,6 @@ class SiswaController extends Controller
 
         return redirect('/siswa');
     }
+
+    
 }

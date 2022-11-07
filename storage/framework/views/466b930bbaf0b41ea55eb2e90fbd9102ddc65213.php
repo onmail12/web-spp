@@ -10,23 +10,26 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="laravel.ico" />
     <!-- Bootstrap icons-->
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+
 
     
-    
 
-    
+
+
 
 </head>
 
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <div class="container px-5">
                 <a class="navbar-brand fw-bolder" href="index.html"><img src="smkn6.webp" width="40px" alt=""> Website
                     Pembayaran SPP</a>
@@ -61,11 +64,15 @@
         <header class="bg-dark py-5">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
-                    <div class="col-lg-8 col-xl-auto col-xxl-auto">
+                    <div class="col">
                         <div class="my-5 text-center text-xl-start">
                             
                             <?php echo $__env->yieldContent('header'); ?>
                         </div>
+                    </div>
+                    <div class="col">
+                        <img class="rounded-3" src="https://dummyimage.com/600x400/333/fff" alt="">
+
                     </div>
                     
                 </div>
@@ -76,13 +83,11 @@
         <?php endif; ?>
 
         <!-- Features section-->
-        <section class="section">
 
+        <div class="container px-5 my-5">
+            <?php echo $__env->yieldContent('main'); ?>
+        </div>
 
-            <div class="container px-5 my-5">
-                <?php echo $__env->yieldContent('main'); ?>
-            </div>
-        </section>
         <!-- Testimonial section-->
         
     </main>
@@ -108,10 +113,7 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/bootstrap.js"></script>
+
 </body>
 
 </html><?php /**PATH D:\School\Kelas XI\Pemrograman Web\bayar_spp\resources\views/layout.blade.php ENDPATH**/ ?>

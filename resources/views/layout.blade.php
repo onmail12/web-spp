@@ -10,24 +10,28 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="laravel.ico" />
     <!-- Bootstrap icons-->
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 
-    {{-- <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
+
+    {{--
+    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
     <script src="{{asset('js/bootstrap.js')}}"></script> --}}
-    
 
-    
+
+
 
 </head>
 
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <div class="container px-5">
                 <a class="navbar-brand fw-bolder" href="index.html"><img src="smkn6.webp" width="40px" alt=""> Website
                     Pembayaran SPP</a>
@@ -62,7 +66,7 @@
         <header class="bg-dark py-5">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
-                    <div class="col-lg-8 col-xl-auto col-xxl-auto">
+                    <div class="col">
                         <div class="my-5 text-center text-xl-start">
                             {{-- <h1 class="display-5 fw-bolder text-white mb-2">Website Pembayaran SPP</h1>
                             <p class="lead fw-normal text-white-50 mb-4">Home home home home home home home home home
@@ -73,6 +77,10 @@
                             </div> --}}
                             @yield('header')
                         </div>
+                    </div>
+                    <div class="col">
+                        <img class="rounded-3" src="https://dummyimage.com/600x400/333/fff" alt="">
+
                     </div>
                     {{-- <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img
                             class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d"
@@ -85,13 +93,11 @@
         @endif
 
         <!-- Features section-->
-        <section class="section">
 
+        <div class="container px-5 my-5">
+            @yield('main')
+        </div>
 
-            <div class="container px-5 my-5">
-                @yield('main')
-            </div>
-        </section>
         <!-- Testimonial section-->
         {{-- <div class="py-5 bg-light">
             <div class="container px-5 my-5">
@@ -251,10 +257,7 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/bootstrap.js"></script>
+
 </body>
 
 </html>

@@ -1,6 +1,4 @@
 @extends('layout')
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 {{-- tambah siswa modal --}}
 <div class="modal modal-lg fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
@@ -79,8 +77,8 @@
 <a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
 
-<table id="dataTable" class="table table-hover table-bordered text-nowrap">
-    <thead class="table-light">
+<table id="dataTable" class="table table-hover table-bordered text-nowrap mb-5">
+    <thead class="table-light text-center">
         <th>No</th>
         <th>NIS</th>
         <th>Nama</th>
@@ -108,9 +106,4 @@
 
     @endforeach
 </table>
-<script>
-    $(document).ready(function () {
-    $('#example').DataTable();
-});
-</script>
 @endsection
