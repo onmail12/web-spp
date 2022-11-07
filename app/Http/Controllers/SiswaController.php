@@ -17,30 +17,25 @@ class SiswaController extends Controller
         return view("siswa/siswa", compact('siswa', 'kelas', 'spp'));
     }
 
-    // public function index_tambah(Siswa $siswa)
-    // {
-    //     $siswa = Siswa::all();
-    //     $spp = Spp::all();
-    //     $kelas = Kelas::all();
-    //     return view("siswa/tambah_siswa", compact('siswa', 'spp', 'kelas'));
-    // }
-
     public function create(Request $request)
     {
+        $matched_siswa = Siswa::where('nisn', $request->nisn)->get();
+        if (!empty($matched_siswa[0])) { //exist?
+            return redirect('/siswa')->with('alert', ['alert-danger', 'Gagal!', ' Siswa Gagal Ditambahkan Karena NISN Terduplikat!']); //class, strong text, message
+        } else {
+            Siswa::create([
+                'nisn' => $request->nisn,
+                'nis' => $request->nis,
+                'nama' => $request->nama,
+                'id_kelas' => $request->id_kelas,
+                'alamat' => $request->alamat,
+                'no_telp' => $request->no_telp,
+                'id_spp' => $request->id_spp,
+            ]);
+        }
 
-        $siswa = Siswa::create([
-            'nisn' => $request->nisn,
-            'nis' => $request->nis,
-            'nama' => $request->nama,
-            'id_kelas' => $request->id_kelas,
-            'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
-            'id_spp' => $request->id_spp,
-        ]);
-        return redirect('/siswa');
+        return redirect('/siswa')->with('alert', ['alert-success', 'Berhasil!', ' Siswa Telah Ditambahkan!']);
     }
-
-
 
     public function edit(Siswa $siswa)
     {
@@ -52,16 +47,21 @@ class SiswaController extends Controller
 
     public function update(Siswa $siswa, Request $request)
     {
-        Siswa::where('nisn', $request->nisn)->update([
-            'nisn' => $request->nisn_new,
-            'nis' => $request->nis,
-            'nama' => $request->nama,
-            'id_kelas' => $request->id_kelas,
-            'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
-            'id_spp' => $request->id_spp,
-        ]);
-        return redirect('/siswa');
+        $matched_siswa = Siswa::where('nisn', $request->nisn_new)->get();
+        if (!empty($matched_siswa[0])) { //exist?
+            return redirect('/siswa')->with('alert', ['alert-danger', 'Gagal!', ' Siswa Gagal Diubah Karena NISN Terduplikat!']); //class, strong text, message
+        } else {
+            Siswa::where('nisn', $request->nisn)->update([
+                'nisn' => $request->nisn_new,
+                'nis' => $request->nis,
+                'nama' => $request->nama,
+                'id_kelas' => $request->id_kelas,
+                'alamat' => $request->alamat,
+                'no_telp' => $request->no_telp,
+                'id_spp' => $request->id_spp,
+            ]);
+            return redirect('/siswa')->with('alert', ['alert-success', 'Berhasil!', ' Data Siswa Telah Diubah!']);
+        }
     }
 
     public function delete($nisn)
@@ -69,8 +69,6 @@ class SiswaController extends Controller
 
         $siswa = Siswa::where('nisn', $nisn)->delete();
 
-        return redirect('/siswa');
+        return redirect('/siswa')->with('alert', ['alert-success', 'Berhasil!', ' Data Siswa Telah Dihapus!']);
     }
-
-    
 }

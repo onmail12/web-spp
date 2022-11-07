@@ -6,7 +6,7 @@
 <?php $__env->startSection('main'); ?>
 <h2 class="display-5">Edit Data Siswa</h2>
 <div class="border rounded-4">
-    <form class="px-3 mx-3 mt-3 mb-3" action="/update_siswa" method="POST">
+    <form class="px-3 mx-3 my-3" action="/update_siswa" method="POST">
         <?php echo e(csrf_field()); ?>
 
         <?php $__currentLoopData = $siswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $siswa): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

@@ -75,10 +75,14 @@
 
 <?php $__env->startSection('main'); ?>
 
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+<?php if(session('alert')): ?>
+<div class="alert <?php echo e(session('alert')[0]); ?> alert-dismissible fade show w-50" role="alert">
+    <strong><?php echo e(session('alert')[1]); ?></strong> <?php echo e(session('alert')[2]); ?>
+
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+</div>
+<?php endif; ?>
+
 <h2 class="display-5">List Data Siswa</h2>
 <a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
@@ -86,6 +90,7 @@
 <table id="dataTable" class="table table-hover table-bordered text-nowrap mb-5">
     <thead class="table-light text-center">
         <th>No</th>
+        <th>NISN</th>
         <th>NIS</th>
         <th>Nama</th>
         
@@ -98,6 +103,7 @@
     <tbody class="">
         <tr>
             <td><?php echo e($i); ?></td>
+            <td><?php echo e($siswa->nisn); ?></td>
             <td><?php echo e($siswa->nis); ?></td>
             <td><?php echo e($siswa->nama); ?></td>
             
