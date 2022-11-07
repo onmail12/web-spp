@@ -22,7 +22,7 @@ class SiswaFactory extends Factory
             'nis' => $this->faker->numerify('2020####'),
             'nama' => $this->faker->name(),
             'id_kelas' => mt_rand(1, 10),
-            'alamat' => $this->faker->streetAddress(), // Jakarta, Jalan Soekarno
+            'alamat' => $this->faker->streetAddress(),
             'no_telp' => $this->faker->e164PhoneNumber(),
             'id_spp' => mt_rand(1, 10),
         ];

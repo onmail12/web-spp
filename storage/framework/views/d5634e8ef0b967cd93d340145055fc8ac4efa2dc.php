@@ -74,6 +74,11 @@
 </div>
 
 <?php $__env->startSection('main'); ?>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 <h2 class="display-5">List Data Siswa</h2>
 <a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
@@ -83,7 +88,7 @@
         <th>No</th>
         <th>NIS</th>
         <th>Nama</th>
-        <th>Alamat</th>
+        
         <th>Kelas</th>
         <th style="width:100px; text-align:center;" colspan=2>Aksi</th>
     </thead>
@@ -95,7 +100,7 @@
             <td><?php echo e($i); ?></td>
             <td><?php echo e($siswa->nis); ?></td>
             <td><?php echo e($siswa->nama); ?></td>
-            <td><?php echo e($siswa->alamat); ?></td>
+            
             <td><?php echo e($siswa->kelas->nama_kelas); ?></td>
 
             <td class="text-center"><a class="btn btn-primary p-2" href="<?php echo e(route('edit_siswa', $siswa->nisn)); ?>"><i

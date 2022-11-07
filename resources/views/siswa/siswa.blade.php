@@ -72,7 +72,11 @@
     </div>
 </div>
 
-@section('main')
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 <h2 class="display-5">List Data Siswa</h2>
 <a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
@@ -82,11 +86,11 @@
         <th>No</th>
         <th>NIS</th>
         <th>Nama</th>
-        <th>Alamat</th>
+        {{-- <th>Alamat</th> --}}
         <th>Kelas</th>
         <th style="width:100px; text-align:center;" colspan=2>Aksi</th>
     </thead>
-    @php $i = 0; @endphp
+    @php $i = 0; @endphp 
     @foreach ($siswa as $siswa)
     @php $i++; @endphp
     <tbody class="">
@@ -94,7 +98,7 @@
             <td>{{ $i }}</td>
             <td>{{ $siswa->nis }}</td>
             <td>{{ $siswa->nama }}</td>
-            <td>{{ $siswa->alamat }}</td>
+            {{-- <td>{{ $siswa->alamat }}</td> --}}
             <td>{{ $siswa->kelas->nama_kelas }}</td>
 
             <td class="text-center"><a class="btn btn-primary p-2" href="{{ route('edit_siswa', $siswa->nisn) }}"><i
@@ -106,4 +110,3 @@
 
     @endforeach
 </table>
-@endsection
