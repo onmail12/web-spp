@@ -33,6 +33,16 @@
 
 @endsection
 @section('main')
+
+<div class="border rounded mb-2">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mx-4 my-1 py-2">
+            <li class="breadcrumb-item active" aria-current="page"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Spp</li>
+        </ol>
+    </nav>
+</div>
+
 <a class="btn btn-outline-success sm-2 my-2" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Spp</a>
 

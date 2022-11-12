@@ -12,7 +12,65 @@
 @endsection
 
 @section('main')
-<div>
+<div class="border rounded mb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mx-4 my-1 py-2">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="row">
+    <div class="col ms-5">
+        <div class="card mb-5" style="width: 20rem;">
+            <img src="https://dummyimage.com/500x500/333/fff" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Siswa</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corrupti
+                    facernulla
+                    maiores debitis quaerat nemo voluptatem dicta ducimus ipsum pariatur corporis aliquid. Provident
+                    quod
+                    perspiciatis a, ad eius perferendis.
+                </p>
+                <a href="/siswa" class="btn btn-primary w-100">Siswa</a>
+            </div>
+        </div>
+    </div>
+    <div class="col ms-5">
+        <div class="card mb-5" style="width: 20rem;">
+            <img src="https://dummyimage.com/500x500/333/fff" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Petugas</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corrupti
+                    facernulla
+                    maiores debitis quaerat nemo voluptatem dicta ducimus ipsum pariatur corporis aliquid. Provident
+                    quod
+                    perspiciatis a, ad eius perferendis.
+                </p>
+                <a href="/petugas" class="btn btn-primary w-100">Petugas</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col ms-5">
+        <div class="card mb-5" style="width: 20rem;">
+            <img src="https://dummyimage.com/500x500/333/fff" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Kelas</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corrupti
+                    facernulla
+                    maiores debitis quaerat nemo voluptatem dicta ducimus ipsum pariatur corporis aliquid. Provident
+                    quod
+                    perspiciatis a, ad eius perferendis.
+                </p>
+                <a href="/kelas" class="btn btn-primary w-100">Kelas</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- <div>
     <div class="bd-example-snippet bd-code-snippet">
         <div class="bd-example">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -26,8 +84,9 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item">
-                        <img src="carousel1.webp" class="img-fluid bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-                            width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img"
+                        <img src="carousel1.webp"
+                            class="img-fluid bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
+                            height="400" xmlns="http://www.w3.org/2000/svg" role="img"
                             aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                         <title>Placeholder</title>
@@ -39,8 +98,9 @@
                         </div>
                     </div>
                     <div class="carousel-item active">
-                        <img src="carousel2.jpg" class="img-fluid bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-                            width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img"
+                        <img src="carousel2.jpg"
+                            class="img-fluid bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
+                            height="400" xmlns="http://www.w3.org/2000/svg" role="img"
                             aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                         <title>Placeholder</title>
@@ -52,8 +112,9 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="carousel3.webp" class="img-fluid bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-                            width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img"
+                        <img src="carousel3.webp"
+                            class="img-fluid bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
+                            height="400" xmlns="http://www.w3.org/2000/svg" role="img"
                             aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                         <title>Placeholder</title>
@@ -79,5 +140,5 @@
         </div>
     </div>
 
-</div>
+</div> --}}
 @endsection
