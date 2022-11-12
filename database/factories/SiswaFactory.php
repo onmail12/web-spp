@@ -23,7 +23,7 @@ class SiswaFactory extends Factory
             'nama' => $this->faker->name(),
             'id_kelas' => mt_rand(1, 10),
             'alamat' => $this->faker->streetAddress(),
-            'no_telp' => $this->faker->e164PhoneNumber(),
+            'no_telp' => $this->faker->unique->numerify('+62###########'),
             'id_spp' => mt_rand(1, 10),
         ];
     }
