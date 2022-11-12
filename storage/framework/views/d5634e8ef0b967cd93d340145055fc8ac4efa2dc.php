@@ -75,8 +75,17 @@
 
 <?php $__env->startSection('main'); ?>
 
+<div class="border rounded mb-2">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mx-4 my-1 py-2">
+            <li class="breadcrumb-item active" aria-current="page"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Siswa</li>
+        </ol>
+    </nav>
+</div>
+
 <?php if(session('alert')): ?>
-<div class="alert <?php echo e(session('alert')[0]); ?> alert-dismissible fade show w-50" role="alert">
+<div class="alert my-2 <?php echo e(session('alert')[0]); ?> alert-dismissible fade show w-50" role="alert">
     <strong><?php echo e(session('alert')[1]); ?></strong> <?php echo e(session('alert')[2]); ?>
 
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

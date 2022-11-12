@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Pembayaran SPP</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="laravel.ico" />
+    <link rel="icon" type="image/x-icon" href=" <?php echo e(asset("laravel.ico")); ?>" />
     <!-- Bootstrap icons-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-
+    <link href="css/_style.css" rel="stylesheet" />
 
     
 
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <img class="rounded-3" src="https://dummyimage.com/600x400/333/fff" alt="">
+                        <img class="rounded" src="https://dummyimage.com/600x400/333/fff" alt="">
 
                     </div>
                     
@@ -80,8 +80,6 @@
         <?php else: ?>
 
         <?php endif; ?>
-
-        <!-- Features section-->
 
         <div class="container px-5 my-5">
             <?php echo $__env->yieldContent('main'); ?>
