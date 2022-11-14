@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SppController;
-use App\Models\Siswa;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -39,3 +39,9 @@ Route::get('/delete_spp/{spp:id_spp}',[SppController::class, 'delete']) -> name(
 Route::post('/update_spp', [SppController::class, 'update']) -> name('update_spp');
 
 
+Route::get('/kelas', [KelasController::class, 'index']) -> name('kelas');
+Route::get('/create_kelas', [KelasController::class, 'create']) -> name('create_kelas');
+
+Route::get('/edit_kelas/{kelas:id_kelas}',[KelasController::class, 'edit']) -> name('edit_kelas');
+Route::get('/delete_kelas/{kelas:id_kelas}',[KelasController::class, 'delete']) -> name('delete_kelas');
+Route::post('/update_kelas', [KelasController::class, 'update']) -> name('update_kelas');
