@@ -31,7 +31,6 @@ class KelasController extends Controller
 
     public function update(Request $request)
     {
-
         Kelas::where('id_kelas', $request->id_kelas)->update([
             'nama_kelas' => $request->nama_kelas,
             'kompetensi_keahlian' => $request->kompetensi_keahlian,

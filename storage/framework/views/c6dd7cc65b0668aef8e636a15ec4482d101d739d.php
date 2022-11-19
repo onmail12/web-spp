@@ -4,6 +4,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('main'); ?>
+
 <h2 class="display-5">Edit Data Siswa</h2>
 <div class="border rounded-4 bg-secondary" style="--bs-bg-opacity: 0.01;">
     <form class="m-4" action="/update_siswa" method="POST">
