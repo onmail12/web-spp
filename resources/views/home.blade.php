@@ -21,7 +21,7 @@
 </div>
 
 
-<div class="row">
+<div class="d-flex justify-content-center">
     <div class="col ms-5">
         <div class="card mb-5" style="width: 20rem;">
             <img src="https://dummyimage.com/500x500/333/fff" class="card-img-top">

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('no_telp');
             $table->foreignId('id_spp')->index();
-
+            $table->string('keterangan');
             $table->time('created_at');
             $table->time('updated_at');
             

@@ -25,6 +25,7 @@ class SiswaFactory extends Factory
             'alamat' => $this->faker->streetAddress(),
             'no_telp' => $this->faker->unique->numerify('+62###########'),
             'id_spp' => mt_rand(1, 10),
+            'keterangan' => 'belum lunas'
         ];
     }
 }

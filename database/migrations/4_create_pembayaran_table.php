@@ -18,11 +18,9 @@ return new class extends Migration
             $table->foreignId('id_petugas');
             $table->string('nisn')->index();
             $table->date('tgl_bayar');
-            $table->string('bulan_dibayar');
-            $table->string('tahun_dibayar');
             $table->foreignId('id_spp')->index();
             $table->integer('jumlah_bayar');
-
+            $table->string('keterangan');
             
             //foreigns
             $table->foreign('id_spp')->references('id_spp')->on('siswa')->onUpdate('cascade')->onDelete('cascade');

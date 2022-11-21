@@ -26,15 +26,15 @@
                         class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link px-2" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-2" href="/siswa">Siswa</a></li>
-                        <li class="nav-item"><a class="nav-link px-2" href="/kelas">Kelas</a></li>
-                        <li class="nav-item"><a class="nav-link px-2" href="/spp">Spp</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="/siswa">Siswa</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="/kelas">Kelas</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="/spp">Spp</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Pembayaran</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                <li><a class="dropdown-item" href="blog-home.html">Transaksi Pembayaran</a></li>
+                                <li><a class="dropdown-item" href="/pembayaran">Transaksi Pembayaran</a></li>
                                 <li><a class="dropdown-item" href="blog-post.html">Histori Pembayaran</a></li>
                             </ul>
                         </li>
@@ -49,15 +49,12 @@
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col">
                         <div class="my-5 text-center text-xl-start">
-                            
                             <?php echo $__env->yieldContent('header'); ?>
                         </div>
                     </div>
                     <div class="col">
                         <img class="rounded" src="https://dummyimage.com/600x400/333/fff" alt="">
-
                     </div>
-                    
                 </div>
             </div>
         </header>
@@ -73,7 +70,7 @@
         
     </main>
     <!-- Footer-->
-    <footer class="bg-dark py-4 mt-auto ">
+    <footer class="bg-dark py-4 mt-auto fixed-bottom">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">

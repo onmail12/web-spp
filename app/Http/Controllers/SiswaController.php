@@ -31,6 +31,7 @@ class SiswaController extends Controller
                 'alamat' => $request->alamat,
                 'no_telp' => $request->no_telp,
                 'id_spp' => $request->id_spp,
+                'keterangan' => 'belum lunas',
             ]);
         }
 
@@ -55,6 +56,7 @@ class SiswaController extends Controller
             'alamat' => $request->alamat,
             'no_telp' => $request->no_telp,
             'id_spp' => $request->id_spp,
+            'keterangan' => 'belum lunas',
         ]);
         return redirect('/siswa')->with('alert', ['alert-success', 'Berhasil!', ' Data Siswa Telah Diubah!']);
     }
