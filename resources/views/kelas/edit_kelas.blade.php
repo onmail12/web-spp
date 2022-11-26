@@ -10,6 +10,7 @@
     <form class="px-3 mx-3 mt-3 mb-3" action="/update_kelas" method="POST">
         {{ csrf_field() }}
         @foreach ($kelas as $kelas)
+        
         <input type="hidden" name='id_kelas' value="{{$kelas->id_kelas}}">
 
         <div class="form-group mb-3 my-2">
