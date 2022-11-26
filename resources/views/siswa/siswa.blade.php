@@ -74,15 +74,6 @@
 
 @section('main')
 
-<div class="border rounded mb-2">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mx-4 my-1 py-2">
-            <li class="breadcrumb-item active" aria-current="page"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Siswa</li>
-        </ol>
-    </nav>
-</div>
-
 @if (session('alert'))
 <div class="alert my-2 {{session('alert')[0]}} alert-dismissible fade show w-50" role="alert">
     <strong>{{session('alert')[1]}}</strong> {{session('alert')[2]}}
@@ -90,7 +81,13 @@
 </div>
 @endif
 
-<h2 class="display-5">List Data Siswa</h2>
+@if (($siswa->count() == 0))
+<h2 class="display-5 text-center my-3">Data Siswa Tidak Ditemukan!</h2>
+<a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
+    <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
+@else
+<h2 class="display-5 text-center">List Data Siswa</h2>
+
 <a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
 
@@ -107,14 +104,14 @@
     @php $i = 0; @endphp
     @foreach ($siswa as $siswa)
     @php $i++; @endphp
-    <tbody class="">
+    <tbody>
         <tr>
-            <td>{{ $i }}</td>
-            <td>{{ $siswa->nisn }}</td>
-            <td>{{ $siswa->nis }}</td>
+            <td class="text-center">{{ $i }}</td>
+            <td class="text-center">{{ $siswa->nisn }}</td>
+            <td class="text-center">{{ $siswa->nis }}</td>
             <td>{{ $siswa->nama }}</td>
             {{-- <td>{{ $siswa->alamat }}</td> --}}
-            <td>{{ $siswa->kelas->nama_kelas }}</td>
+            <td class="text-center">{{ $siswa->kelas->nama_kelas }}</td>
 
             <td class="text-center"><a class="btn btn-primary p-2" href="{{ route('edit_siswa', $siswa->nisn) }}"><i
                         class="bi bi-pencil-square"></i></a>
@@ -125,4 +122,5 @@
 
     @endforeach
 </table>
+@endif
 @endsection

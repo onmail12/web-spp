@@ -5,6 +5,8 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SppController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 Route::get('/', function () {
@@ -40,3 +42,11 @@ Route::get('/create_pembayaran/{siswa:nisn}', [PembayaranController::class, 'cre
 Route::get('/edit_pembayaran/{pembayaran:id_pembayaran}', [PembayaranController::class, 'edit'])->name('edit_pembayaran');
 Route::get('/delete_pembayaran/{pembayaran:id_pembayaran}', [PembayaranController::class, 'delete'])->name('delete_pembayaran');
 Route::post('/update_pembayaran', [PembayaranController::class, 'update'])->name('update_pembayaran');
+
+//login
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);

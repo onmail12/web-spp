@@ -6,21 +6,12 @@
     delectus deleniti quae cupiditate, qui eum labore eveniet ut ullam veritatis rem fuga assumenda totam architecto
     ducimus repellendus, corporis recusandae.</p>
 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Transaksi Pembayaran</a>
-    <a class="btn btn-outline-light btn-lg px-4" href="#!">Histori Pembayaran</a>
+    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/pembayaran">Transaksi Pembayaran</a>
+    <a class="btn btn-outline-light btn-lg px-4" href="/histori">Histori Pembayaran</a>
 </div>
 @endsection
 
 @section('main')
-<div class="border rounded mb-5">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mx-4 my-1 py-2">
-            <li class="breadcrumb-item active" aria-current="page">Home</li>
-        </ol>
-    </nav>
-</div>
-
-
 <div class="d-flex justify-content-center">
     <div class="col ms-5">
         <div class="card mb-5" style="width: 20rem;">

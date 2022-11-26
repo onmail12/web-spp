@@ -75,15 +75,6 @@
 
 <?php $__env->startSection('main'); ?>
 
-<div class="border rounded mb-2">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mx-4 my-1 py-2">
-            <li class="breadcrumb-item active" aria-current="page"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Siswa</li>
-        </ol>
-    </nav>
-</div>
-
 <?php if(session('alert')): ?>
 <div class="alert my-2 <?php echo e(session('alert')[0]); ?> alert-dismissible fade show w-50" role="alert">
     <strong><?php echo e(session('alert')[1]); ?></strong> <?php echo e(session('alert')[2]); ?>
@@ -92,7 +83,13 @@
 </div>
 <?php endif; ?>
 
-<h2 class="display-5">List Data Siswa</h2>
+<?php if(($siswa->count() == 0)): ?>
+<h2 class="display-5 text-center my-3">Data Siswa Tidak Ditemukan!</h2>
+<a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
+    <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
+<?php else: ?>
+<h2 class="display-5 text-center">List Data Siswa</h2>
+
 <a class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addModal">
     <i class="bi bi-person-plus px-2"></i>Tambah Siswa</a>
 
@@ -109,14 +106,14 @@
     <?php $i = 0; ?>
     <?php $__currentLoopData = $siswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $siswa): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <?php $i++; ?>
-    <tbody class="">
+    <tbody>
         <tr>
-            <td><?php echo e($i); ?></td>
-            <td><?php echo e($siswa->nisn); ?></td>
-            <td><?php echo e($siswa->nis); ?></td>
+            <td class="text-center"><?php echo e($i); ?></td>
+            <td class="text-center"><?php echo e($siswa->nisn); ?></td>
+            <td class="text-center"><?php echo e($siswa->nis); ?></td>
             <td><?php echo e($siswa->nama); ?></td>
             
-            <td><?php echo e($siswa->kelas->nama_kelas); ?></td>
+            <td class="text-center"><?php echo e($siswa->kelas->nama_kelas); ?></td>
 
             <td class="text-center"><a class="btn btn-primary p-2" href="<?php echo e(route('edit_siswa', $siswa->nisn)); ?>"><i
                         class="bi bi-pencil-square"></i></a>
@@ -127,5 +124,6 @@
 
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </table>
+<?php endif; ?>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\School\Kelas XI\Pemrograman Web\bayar_spp\resources\views/siswa/siswa.blade.php ENDPATH**/ ?>

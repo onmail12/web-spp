@@ -11,7 +11,7 @@ class SiswaController extends Controller
 {
     public function index(Siswa $siswa, Spp $spp)
     {
-        $siswa = Siswa::latest()->get();
+        $siswa = Siswa::orderBy('created_at', 'DESC')->orderBy('updated_at', 'DESC')->get();
         $kelas = Kelas::all();
         $spp = Spp::all();
         return view("siswa/siswa", compact('siswa', 'kelas', 'spp'));
@@ -56,9 +56,8 @@ class SiswaController extends Controller
             'alamat' => $request->alamat,
             'no_telp' => $request->no_telp,
             'id_spp' => $request->id_spp,
-            'keterangan' => 'belum lunas',
         ]);
-        return redirect('/siswa')->with('alert', ['alert-success', 'Berhasil!', ' Data Siswa Telah Diubah!']);
+        return redirect('/siswa')->with('alert', ['alert-success', 'Berhasil!', ' Data Siswa Telah Diubah!'])->with('last_updated', $request->nisn);
     }
 
     public function delete($nisn)
