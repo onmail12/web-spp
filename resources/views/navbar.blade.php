@@ -6,10 +6,10 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link px-3" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="/siswa">Siswa</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="/kelas">Kelas</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="/spp">Spp</a></li>
+                <li class="nav-item"><a class="nav-link px-3 {{ Route::is('home') ? 'active' : '' }}" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3 {{ Route::is('siswa') ? 'active' : '' }}" href="/siswa">Siswa</a></li>
+                <li class="nav-item"><a class="nav-link px-3 {{ Route::is('kelas') ? 'active' : '' }}" href="/kelas">Kelas</a></li>
+                <li class="nav-item"><a class="nav-link px-3 {{ Route::is('spp') ? 'active' : '' }}" href="/spp">Spp</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">Pembayaran</a>

@@ -11,10 +11,10 @@ use Illuminate\Routing\Route as RoutingRoute;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 //siswa
-Route::get('/siswa', [SiswaController::class, 'index']);
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa');
 Route::get('/tambah_siswa', [SiswaController::class, 'index_tambah'])->name('tambah_siswa');
 Route::get('/create_siswa', [SiswaController::class, 'create'])->name('create_siswa');
 Route::get('/edit_siswa/{siswa:nisn}', [SiswaController::class, 'edit'])->name('edit_siswa');
