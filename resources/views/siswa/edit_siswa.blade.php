@@ -12,16 +12,18 @@
         @foreach ($siswa as $siswa)
         <input type="hidden" name='nisn' value="{{$siswa->nisn}}">
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="{{$siswa->nisn}}" name="nisn_new" placeholder="Enter NISN">
+            <input type="text" class="form-control" value="{{$siswa->nisn}}" name="nisn_new" placeholder="Enter NISN"
+                required>
             <label for="nisn">NISN</label>
 
         </div>
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="{{$siswa->nis}}" name="nis" placeholder="Enter NIS">
+            <input type="text" class="form-control" value="{{$siswa->nis}}" name="nis" placeholder="Enter NIS" required>
             <label for="nis">NIS</label>
         </div>
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="{{$siswa->nama}}" name="nama" placeholder="Enter Nama">
+            <input type="text" class="form-control" value="{{$siswa->nama}}" name="nama" placeholder="Enter Nama"
+                required>
             <label for="nama">Nama</label>
         </div>
 
@@ -37,20 +39,20 @@
         </div>
 
         <div class="form-group form-floating my-4">
-            <textarea class="form-control" name="alamat" style="height: 100px;" placeholder="Enter Alamat">{{$siswa->alamat}}</textarea>
+            <input type="text" class="form-control" value="{{$siswa->alamat}}" name="alamat" placeholder="Enter Alamat" required>
             <label for="alamat">Alamat</label>
-
         </div>
 
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="{{$siswa->no_telp}}" name="no_telp"
-                placeholder="Enter No. Telpon">
+            <input type="text" class="form-control" value="{{$siswa->no_telp}}" name="no_telp required"
+                placeholder="Enter No. Telpon" required>
             <label for="no_telp">No. Telpon</label>
 
         </div>
 
         <div class="form-group form-floating my-4">
             <select class="form-select" value="{{$siswa->id_spp}}" name="id_spp">
+                <option value="1">Pilih Spp</option>
                 @foreach ($spp as $spp)
                 <option value="{{$spp->id_spp}}">{{$spp->tahun}}</option>
                 @endforeach

@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Kelas;
 use App\Models\Spp;
 use App\Models\Siswa;
-use App\Models\User;
+use App\Models\Petugas;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,11 +23,7 @@ class DatabaseSeeder extends Seeder
         Spp::factory(10)->create();
 
         Siswa::factory(10)->create();
-
-        User::create([
-            'name' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt('admin')
-        ]);
+        
+        Petugas::factory(10)->create();
     }
 }

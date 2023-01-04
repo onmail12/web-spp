@@ -6,16 +6,16 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link px-3" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="/siswa">Siswa</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="/kelas">Kelas</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="/spp">Spp</a></li>
+                <li class="nav-item"><a class="nav-link {{ Route::is('home') ? 'active' : '' }} px-3" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link {{ Route::is('siswa') ? 'active' : '' }} px-3" href="/siswa">Siswa</a></li>
+                <li class="nav-item"><a class="nav-link {{ Route::is('kelas') ? 'active' : '' }} px-3" href="/kelas">Kelas</a></li>
+                <li class="nav-item"><a class="nav-link {{ Route::is('spp') ? 'active' : '' }} px-3" href="/spp">Spp</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
+                    <a class="nav-link {{ Route::is('pembayaran') ? 'active' : '' }} px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">Pembayaran</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
                         <li><a class="dropdown-item" href="/pembayaran">Transaksi Pembayaran</a></li>
-                        <li><a class="dropdown-item" href="blog-post.html">Histori Pembayaran</a></li>
+                        <li><a class="dropdown-item" href="/histori">Histori Pembayaran</a></li>
                     </ul>
                 </li>
             </ul>
@@ -28,7 +28,7 @@
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link px-2 dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Welcome, {{ auth()->user()->name }}</a>
+                        data-bs-toggle="dropdown" aria-expanded="false">Welcome, {{ auth()->user() }}</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
                         <li>
                             <form action="/logout" method="post">

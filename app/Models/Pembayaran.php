@@ -16,7 +16,14 @@ class Pembayaran extends Model
     const UPDATED_AT = 'tgl_bayar';
 
     public function siswa(){
-        return $this->belongsTo(Siswa::class);
+        return $this->belongsTo(Siswa::class, "nisn", "nisn");
     }
 
+    public function spp(){
+        return $this->belongsTo(Spp::class, "id_spp", "id_spp");
+    }
+    
+    public function petugas(){
+        return $this->belongsTo(Petugas::class, "id_petugas", "id_petugas");
+    }
 }

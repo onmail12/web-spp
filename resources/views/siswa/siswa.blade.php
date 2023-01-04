@@ -15,23 +15,24 @@
                     <div class="row">
                         <div class="col form-group my-2">
                             <label for="nisn">NISN</label>
-                            <input type="text" class="form-control" name="nisn" placeholder="Enter NISN">
+                            <input type="text" class="form-control" name="nisn" placeholder="Enter NISN" required>
                         </div>
                         <div class="col form-group my-2">
                             <label for="nis">NIS</label>
-                            <input type="text" class="form-control" name="nis" placeholder="Enter NIS">
+                            <input type="text" class="form-control" name="nis" placeholder="Enter NIS" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col form-group my-2">
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+                            <input type="text" class="form-control" name="nama" placeholder="Enter Nama" required>
                         </div>
 
                         <div class="col form-group my-2">
                             <label for="id_kelas">Kelas</label>
                             <select class="form-select" name="id_kelas">
+                                <option value="1">Pilih Kelas</option>
                                 @foreach ($kelas as $kelas)
                                 <option value="{{$kelas->id_kelas}}">{{$kelas->nama_kelas}}</option>
                                 @endforeach
@@ -42,19 +43,20 @@
 
                     <div class="col form-group my-2">
                         <label for="alamat">Alamat</label>
-                        <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
+                        <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat" required>
                     </div>
 
                     <div class="row">
                         <div class="col form-group my-2">
                             <label for="no_telp">No.Telp</label>
-                            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
+                            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon" required>
                         </div>
 
 
                         <div class="col form-group my-2">
                             <label for="id_spp">Spp Tahun</label>
                             <select class="form-select" name="id_spp">
+                                <option value="1">Pilih Spp</option>
                                 @foreach ($spp as $spp)
                                 <option value="{{$spp->id_spp}}">{{$spp->tahun}}</option>
                                 @endforeach

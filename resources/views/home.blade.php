@@ -12,6 +12,7 @@
 @endsection
 
 @section('main')
+@auth
 <div class="d-flex justify-content-center">
     <div class="col ms-5">
         <div class="card mb-5" style="width: 20rem;">
@@ -60,7 +61,7 @@
         </div>
     </div>
 </div>
-
+@endauth
 {{-- <div>
     <div class="bd-example-snippet bd-code-snippet">
         <div class="bd-example">

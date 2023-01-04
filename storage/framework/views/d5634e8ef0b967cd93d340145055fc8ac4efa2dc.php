@@ -16,23 +16,24 @@
                     <div class="row">
                         <div class="col form-group my-2">
                             <label for="nisn">NISN</label>
-                            <input type="text" class="form-control" name="nisn" placeholder="Enter NISN">
+                            <input type="text" class="form-control" name="nisn" placeholder="Enter NISN" required>
                         </div>
                         <div class="col form-group my-2">
                             <label for="nis">NIS</label>
-                            <input type="text" class="form-control" name="nis" placeholder="Enter NIS">
+                            <input type="text" class="form-control" name="nis" placeholder="Enter NIS" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col form-group my-2">
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" name="nama" placeholder="Enter Nama">
+                            <input type="text" class="form-control" name="nama" placeholder="Enter Nama" required>
                         </div>
 
                         <div class="col form-group my-2">
                             <label for="id_kelas">Kelas</label>
                             <select class="form-select" name="id_kelas">
+                                <option value="1">Pilih Kelas</option>
                                 <?php $__currentLoopData = $kelas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kelas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($kelas->id_kelas); ?>"><?php echo e($kelas->nama_kelas); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -43,19 +44,20 @@
 
                     <div class="col form-group my-2">
                         <label for="alamat">Alamat</label>
-                        <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat">
+                        <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat" required>
                     </div>
 
                     <div class="row">
                         <div class="col form-group my-2">
                             <label for="no_telp">No.Telp</label>
-                            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon">
+                            <input type="text" class="form-control" name="no_telp" placeholder="Enter No. Telpon" required>
                         </div>
 
 
                         <div class="col form-group my-2">
                             <label for="id_spp">Spp Tahun</label>
                             <select class="form-select" name="id_spp">
+                                <option value="1">Pilih Spp</option>
                                 <?php $__currentLoopData = $spp; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($spp->id_spp); ?>"><?php echo e($spp->tahun); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

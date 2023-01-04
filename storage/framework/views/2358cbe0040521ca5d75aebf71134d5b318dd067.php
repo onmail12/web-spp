@@ -12,6 +12,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('main'); ?>
+<?php if(auth()->guard()->check()): ?>
 <div class="d-flex justify-content-center">
     <div class="col ms-5">
         <div class="card mb-5" style="width: 20rem;">
@@ -60,7 +61,7 @@
         </div>
     </div>
 </div>
-
+<?php endif; ?>
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\School\Kelas XI\Pemrograman Web\bayar_spp\resources\views/home.blade.php ENDPATH**/ ?>

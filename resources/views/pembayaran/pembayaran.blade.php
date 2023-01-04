@@ -19,7 +19,6 @@
         <th>NISN</th>
         <th>NIS</th>
         <th>Nama</th>
-        {{-- <th>Alamat</th> --}}
         <th>Kelas</th>
         <th>Nominal</th>
         <th style="width:100px; text-align:center;">Aksi</th>
@@ -34,9 +33,8 @@
             <td>{{ $siswa->nisn }}</td>
             <td>{{ $siswa->nis }}</td>
             <td>{{ $siswa->nama }}</td>
-            {{-- <td>{{ $siswa->alamat }}</td> --}}
             <td>{{ $siswa->kelas->nama_kelas }}</td>
-            <td>Rp{{ $siswa->spp->nominal }}.000</td>
+            <td>{{ $siswa->spp->nominal }}</td>
 
             <td class="text-center"><a class="btn btn-primary p-2"
                     href="{{ route('tambah_pembayaran', $siswa->nisn) }}">Bayar</a>

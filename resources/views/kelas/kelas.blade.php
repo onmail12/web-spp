@@ -14,13 +14,13 @@
                     {{ csrf_field() }}
                     <div class="form-group my-2">
                         <label for="nama_kelas">Nama Kelas</label>
-                        <input type="text" class="form-control" name="nama_kelas" placeholder="Enter Nama Kelas">
+                        <input type="text" class="form-control" name="nama_kelas" placeholder="Enter Nama Kelas" required>
                     </div>
 
 
                     <div class="form-group my-2">
                         <label for="kompetensi_keahlian">Kompetensi Keahlian</label>
-                        <input type="text" class="form-control" name="kompetensi_keahlian" placeholder="Enter Kompetensi Keahlian">
+                        <input type="text" class="form-control" name="kompetensi_keahlian" placeholder="Enter Kompetensi Keahlian" required>
                     </div>
             </div>
             <div class="modal-footer">

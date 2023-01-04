@@ -13,16 +13,18 @@
         <?php $__currentLoopData = $siswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $siswa): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <input type="hidden" name='nisn' value="<?php echo e($siswa->nisn); ?>">
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="<?php echo e($siswa->nisn); ?>" name="nisn_new" placeholder="Enter NISN">
+            <input type="text" class="form-control" value="<?php echo e($siswa->nisn); ?>" name="nisn_new" placeholder="Enter NISN"
+                required>
             <label for="nisn">NISN</label>
 
         </div>
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="<?php echo e($siswa->nis); ?>" name="nis" placeholder="Enter NIS">
+            <input type="text" class="form-control" value="<?php echo e($siswa->nis); ?>" name="nis" placeholder="Enter NIS" required>
             <label for="nis">NIS</label>
         </div>
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="<?php echo e($siswa->nama); ?>" name="nama" placeholder="Enter Nama">
+            <input type="text" class="form-control" value="<?php echo e($siswa->nama); ?>" name="nama" placeholder="Enter Nama"
+                required>
             <label for="nama">Nama</label>
         </div>
 
@@ -38,20 +40,20 @@
         </div>
 
         <div class="form-group form-floating my-4">
-            <textarea class="form-control" name="alamat" style="height: 100px;" placeholder="Enter Alamat"><?php echo e($siswa->alamat); ?></textarea>
+            <input type="text" class="form-control" value="<?php echo e($siswa->alamat); ?>" name="alamat" placeholder="Enter Alamat" required>
             <label for="alamat">Alamat</label>
-
         </div>
 
         <div class="form-group form-floating my-4">
-            <input type="text" class="form-control" value="<?php echo e($siswa->no_telp); ?>" name="no_telp"
-                placeholder="Enter No. Telpon">
+            <input type="text" class="form-control" value="<?php echo e($siswa->no_telp); ?>" name="no_telp required"
+                placeholder="Enter No. Telpon" required>
             <label for="no_telp">No. Telpon</label>
 
         </div>
 
         <div class="form-group form-floating my-4">
             <select class="form-select" value="<?php echo e($siswa->id_spp); ?>" name="id_spp">
+                <option value="1">Pilih Spp</option>
                 <?php $__currentLoopData = $spp; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <option value="<?php echo e($spp->id_spp); ?>"><?php echo e($spp->tahun); ?></option>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
